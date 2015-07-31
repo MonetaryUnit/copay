@@ -33,7 +33,7 @@ angular.module('copayApp.services').factory('configService', function(storageSer
     },
 
     rates: {
-      url: 'https://insight.bitpay.com:443/api/rates',
+      url: 'https://api.monetaryunit.org/api/rates',
     },
   };
 

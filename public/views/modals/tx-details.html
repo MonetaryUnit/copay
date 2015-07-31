@@ -20,7 +20,7 @@
     <div class="size-42" ng-show="btx.action == 'invalid'">
       -
     </div>
- 
+
     <div class="size-18 m5t text-gray" ng-show="btx.alternativeAmount">
       {{btx.alternativeAmount}} {{settings.alternativeIsoCode}}
     </div>
@@ -98,7 +98,7 @@
   <div ng-show="btx.txid" class="tx-details-blockchain">
     <div class="text-center m20t">
       <button class="button outline round dark-gray tiny" ng-click="$root.openExternalLink('https://' +
-        (getShortNetworkName() == 'test' ? 'test-' : '') + 'insight.bitpay.com/tx/' + btx.txid)">
+        (getShortNetworkName() == 'test' ? 'test-' : '') + 'api.monetaryunit.org/tx/' + btx.txid)">
         <span class="text-gray" translate>See it on the blockchain</span>
       </button>
     </div>

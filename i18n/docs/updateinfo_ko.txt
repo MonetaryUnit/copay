@@ -1,4 +1,4 @@
-서명 기능과 관계 없는 백업 생성이 가능합니다. (https://github.com/bitpay/copay/pull/2998 더 많은 정보)
+서명 기능과 관계 없는 백업 생성이 가능합니다. (https://github.com/MonetaryUnit/copay/pull/2998 더 많은 정보)
 * 트랜잭션 기록의 더 나은 새로고침 및 정렬
 * 기록에서의 더 나은 '무효' 거래 처리
 * 1천회가 넘는 지갑의 기록 처리 향상

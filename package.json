@@ -30,14 +30,14 @@
     "plugin": false
   },
   "id": "jid1-x7bV5evAaI1P9Q",
-  "homepage": "https://github.com/bitpay/copay",
+  "homepage": "https://github.com/MonetaryUnit/copay",
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/bitpay/copay.git",
+    "url": "git://github.com/MonetaryUnit/copay.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/bitpay/copay/issues"
+    "url": "https://github.com/MonetaryUnit/copay/issues"
   },
   "dependencies": {
     "express": "^4.11.2",

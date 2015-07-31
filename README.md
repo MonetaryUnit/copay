@@ -3,7 +3,7 @@
 [![Build Status](https://secure.travis-ci.org/bitpay/copay.svg)](http://travis-ci.org/bitpay/copay) 
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/copay/localized.png)](https://crowdin.com/project/copay)
 
-Copay is an easy-to-use, open-source, multiplatform, multisignature, secure bitcoin wallet platform for both  individuals and companies.  Copay uses [Bitcore Wallet Service](https://github.com/bitpay/bitcore-wallet-service) (BWS) for peer synchronization and bitcore network interfacing. 
+Copay is an easy-to-use, open-source, multiplatform, multisignature, secure bitcoin wallet platform for both  individuals and companies.  Copay uses [Bitcore Wallet Service](https://github.com/MonetaryUnit/bitcore-wallet-service) (BWS) for peer synchronization and bitcore network interfacing. 
 
 Binary versions of Copay are available for download at [Copay.io](https://copay.io).
 
@@ -26,7 +26,7 @@ Binary versions of Copay are available for download at [Copay.io](https://copay.
 ## Installation
 
 ```sh
-git clone https://github.com/bitpay/copay.git
+git clone https://github.com/MonetaryUnit/copay.git
 cd copay
 ```
 
@@ -98,7 +98,7 @@ For more information regarding how addresses are generated using this procedure,
 
 ## Bitcore Wallet Service
 
-Copay depends on [Bitcore Wallet Service](https://github.com/bitpay/bitcore-wallet-service) (BWS) for blockchain information, networking and copayer synchronization.  A BWS instance can be setup and operational within minutes or you can use a public instance like `https://bws.bitpay.com`.  Switching between BWS instances is very simple and can be done with a click from within Copay.  BWS also allows Copay to interoperate with others wallet like [Bitcore Wallet CLI] (https://github.com/bitpay/bitcore-wallet).
+Copay depends on [Bitcore Wallet Service](https://github.com/MonetaryUnit/bitcore-wallet-service) (BWS) for blockchain information, networking and copayer synchronization.  A BWS instance can be setup and operational within minutes or you can use a public instance like `https://bws.bitpay.com`.  Switching between BWS instances is very simple and can be done with a click from within Copay.  BWS also allows Copay to interoperate with others wallet like [Bitcore Wallet CLI] (https://github.com/MonetaryUnit/bitcore-wallet).
 
 ## Translations
 Copay uses standard gettext PO files for translations and [Crowdin](https://crowdin.com/project/copay) as front-end for translators.

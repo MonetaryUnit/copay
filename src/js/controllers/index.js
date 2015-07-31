@@ -691,7 +691,7 @@ angular.module('copayApp.controllers').controller('indexController', function($r
 
           self.satToUnit = 1 / self.unitToSatoshi;
           var data = txs;
-          var satToBtc = 1 / 100000000;
+          var satToBtc = 1 / 100000;
           var filename = 'Copay-' + (self.alias || self.walletName) + '.csv';
           var csvContent = '';
           if (!isNode) csvContent = 'data:text/csv;charset=utf-8,';
@@ -705,17 +705,17 @@ angular.module('copayApp.controllers').controller('indexController', function($r
             if (it.action == 'moved')
               amount = 0;
 
-            _amount = (it.action == 'sent' ? '-' : '') + (amount * satToBtc).toFixed(8);
-            _note = formatString((it.message ? it.message : '') + ' TxId: ' + it.txid + ' Fee:' + (it.fees * satToBtc).toFixed(8));
+            _amount = (it.action == 'sent' ? '-' : '') + (amount * satToBtc).toFixed(5);
+            _note = formatString((it.message ? it.message : '') + ' TxId: ' + it.txid + ' Fee:' + (it.fees * satToBtc).toFixed(5));
 
             if (it.action == 'moved')
-              _note += ' Moved:' + (it.amount * satToBtc).toFixed(8)
+              _note += ' Moved:' + (it.amount * satToBtc).toFixed(5)
 
             dataString = formatDate(it.time * 1000) + ',' + formatString(it.addressTo) + ',' + _note + ',' + _amount + ',BTC,,,,';
-            csvContent += dataString + "\n"; 
+            csvContent += dataString + "\n";
 
             if (it.fees && (it.action == 'moved' || it.action == 'sent')) {
-              var _fee = (it.fees * satToBtc).toFixed(8)
+              var _fee = (it.fees * satToBtc).toFixed(5)
                csvContent += formatDate(it.time * 1000) + ',Bitcoin Network Fees,, -' + _fee + ',BTC,,,,' + "\n";
             }
           });

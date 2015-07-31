@@ -500,14 +500,14 @@ angular.module('copayApp.controllers').controller('walletHomeController', functi
         });
 
       $scope.submitForm = function(form) {
-        var satToBtc = 1 / 100000000;
+        var satToBtc = 1 / 100000;
         var amount = form.amount.$modelValue;
         var amountSat = parseInt((amount * $scope.unitToSatoshi).toFixed(0));
         $timeout(function() {
           $scope.customizedAmountUnit = amount + ' ' + $scope.unitName;
           $scope.customizedAlternativeUnit = $filter('noFractionNumber')(form.alternative.$modelValue, 2) + ' ' + $scope.alternativeIsoCode;
           if ($scope.unitName == 'bits') {
-            amount = (amountSat * satToBtc).toFixed(8);
+            amount = (amountSat * satToBtc).toFixed(5);
           }
           $scope.customizedAmountBtc = amount;
         }, 1);
@@ -534,7 +534,7 @@ angular.module('copayApp.controllers').controller('walletHomeController', functi
     });
   };
 
-  // Send 
+  // Send
 
   this.canShowAlternative = function() {
     return $scope.showAlternative;
@@ -703,7 +703,7 @@ angular.module('copayApp.controllers').controller('walletHomeController', functi
   this.submitForm = function() {
     var fc = profileService.focusedClient;
     var unitToSat = this.unitToSatoshi;
-    
+
     if (isCordova && this.isWindowsPhoneApp) {
       this.hideAddress = false;
       this.hideAmount = false;
@@ -1011,7 +1011,7 @@ angular.module('copayApp.controllers').controller('walletHomeController', functi
   };
 
 
-  // History 
+  // History
 
   function strip(number) {
     return (parseFloat(number.toPrecision(12)));
@@ -1084,7 +1084,7 @@ angular.module('copayApp.controllers').controller('walletHomeController', functi
   };
 
   this.confirmDialog = function(msg, cb) {
-    if (isCordova) { 
+    if (isCordova) {
       navigator.notification.confirm(
         msg,
         function(buttonIndex) {
@@ -1113,10 +1113,10 @@ angular.module('copayApp.controllers').controller('walletHomeController', functi
     });
 
     this.confirmDialog(msg, function(confirmed){
-      if (confirmed) 
+      if (confirmed)
         self._doSendAll(amount);
     });
-  }; 
+  };
 
   /* Start setup */
 
